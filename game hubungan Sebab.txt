@@ -1,0 +1,179 @@
+// Bank Soal Edukasi PAI: Hubungan Sebab - Akibat (Causal Effect)
+const questionBank = [
+    // --- AKHLAK & ETIKA DIGITAL ---
+    {
+        q: "Sebab: Seseorang membiasakan diri untuk selalu jujur (Siddiq) dan menepati janji dalam setiap perkataan.",
+        opts: [
+            "Akibat: Memperoleh kepercayaan publik, ketenangan jiwa, dan keberkahan.",
+            "Akibat: Dijamin tidak akan pernah mengalami kesulitan hidup sama sekali.",
+            "Akibat: Selalu mendapatkan keuntungan materi yang melimpah.",
+            "Akibat: Bebas dari kewajiban beribadah ritual."
+        ],
+        ans: 0,
+        explain: "Kejujuran secara konsisten membangun kepercayaan (Al-Amanah) dan ketenangan batin."
+    },
+    {
+        q: "Sebab: Seorang mahasiswa menyebarkan informasi di media sosial tanpa melakukan Tabayyun (verifikasi).",
+        opts: [
+            "Akibat: Mempercepat penyebaran ilmu pengetahuan yang bermanfaat.",
+            "Akibat: Berpotensi menimbulkan fitnah, perpecahan, dan penyesalan.",
+            "Akibat: Meningkatkan kualitas literasi digital di masyarakat.",
+            "Akibat: Otomatis mendapat pahala menyampaikan kebaikan."
+        ],
+        ans: 1,
+        explain: "QS. Al-Hujurat: 6 menegaskan bahwa menyebarkan berita tanpa verifikasi berisiko menimbulkan fitnah."
+    },
+    {
+        q: "Sebab: Seseorang memelihara sifat Hasad (dengki) atas keberhasilan orang lain.",
+        opts: [
+            "Akibat: Hatinya menjadi tenang dan lebih bersemangat bekerja.",
+            "Akibat: Menghapuskan pahala kebaikan sebagaimana api memakan kayu bakar.",
+            "Akibat: Menambah rezeki dan memperpanjang usia.",
+            "Akibat: Otomatis mengungguli prestasi orang lain."
+        ],
+        ans: 1,
+        explain: "Rasulullah SAW bersabda bahwa dengki (hasad) merusak dan memakan pahala kebaikan."
+    },
+
+    // --- ETIKA BELAJAR & AKADEMIK ---
+    {
+        q: "Sebab: Seorang siswa selalu menyontek dan menggunakan AI secara tidak jujur saat ujian.",
+        opts: [
+            "Akibat: Menguasai ilmu pengetahuan secara mendalam.",
+            "Akibat: Kehilangan integritas, krisis kepercayaan diri, dan kebodohan terselubung.",
+            "Akibat: Mendapatkan pahala karena memanfaatkan teknologi modern.",
+            "Akibat: Menjadi pribadi yang mandiri dan tangguh."
+        ],
+        ans: 1,
+        explain: "Kecurangan akademik merusak proses pembentukan karakter jujur dan pemahaman ilmu yang sejati."
+    },
+    {
+        q: "Sebab: Mahasiswa mengamalkan prinsip Tawazun (keseimbangan) antara ibadah, belajar, dan berorganisasi.",
+        opts: [
+            "Akibat: Terbentuk keberkahan waktu, ketenangan pikiran, dan prestasi optimal.",
+            "Akibat: Nilai akademik dipastikan turun karena fokus terbagi.",
+            "Akibat: Mengalami stres berat dan kelelahan fisik.",
+            "Akibat: Kehilangan waktu untuk bersosialisasi."
+        ],
+        ans: 0,
+        explain: "Prinsip keseimbangan (Tawazun) dalam Islam melahirkan efisiensi waktu dan keberkahan hidup."
+    },
+
+    // --- SOSIAL & KEMASYARAKATAN ---
+    {
+        q: "Sebab: Masyarakat membiasakan budaya Tolong-Menolong (Ta'awun) dalam kebaikan dan takwa.",
+        opts: [
+            "Akibat: Terciptanya solidaritas sosial yang kuat dan lingkungan yang harmonis.",
+            "Akibat: Masyarakat menjadi manja dan tidak mau bekerja keras.",
+            "Akibat: Terjadinya ketergantungan ekonomi antar sesama.",
+            "Akibat: Munculnya persaingan tidak sehat antar warga."
+        ],
+        ans: 0,
+        explain: "QS. Al-Ma'idah: 2 memerintahkan tolong-menolong dalam kebaikan untuk memperkuat ukhuwah."
+    },
+    {
+        q: "Sebab: Seseorang menahan amarahnya ketika dihina dan memilih memaafkan.",
+        opts: [
+            "Akibat: Dianggap lemah dan diinjak-injak oleh orang lain.",
+            "Akibat: Mendapatkan kemuliaan di sisi Allah SWT dan ketenangan batin.",
+            "Akibat: Menambah kerugian materiil dan moral.",
+            "Akibat: Memutus tali silaturahmi secara permanen."
+        ],
+        ans: 1,
+        explain: "Kemampuan menahan amarah dan memaafkan adalah ciri orang bertakwa yang akan dimuliakan Allah."
+    },
+    {
+        q: "Sebab: Seseorang terbiasa ingkar janji dan berdusta dalam bermuamalah.",
+        opts: [
+            "Akibat: Tergolong memiliki tanda-tanda kebiasaan orang munafik.",
+            "Akibat: Menjadi sosok pemimpin yang dicintai bawahannya.",
+            "Akibat: Mempercepat terkabulnya doa-doa.",
+            "Akibat: Bebas dari tanggungan di akhirat."
+        ],
+        ans: 0,
+        explain: "Nabi SAW menyebutkan bahwa apabila berbicara ia berdusta dan apabila berjanji ia ingkar adalah ciri munafik."
+    },
+
+    // --- LINGKUNGAN HIDUP (FIQH BI'AH) ---
+    {
+        q: "Sebab: Manusia melakukan perusakan alam dan membuang sampah sembarangan di sungai.",
+        opts: [
+            "Akibat: Munculnya bencana banjir, penyakit, dan hilangnya keseimbangan ekosistem.",
+            "Akibat: Bertambahnya rezeki dan kemakmuran suatu daerah.",
+            "Akibat: Terciptanya kebersihan lingkungan secara alami.",
+            "Akibat: Alam menjadi lebih indah dan tertata."
+        ],
+        ans: 0,
+        explain: "QS. Ar-Rum: 41 menjelaskan bahwa kerusakan di darat dan laut terjadi akibat perbuatan tangan manusia."
+    },
+    {
+        q: "Sebab: Umat Islam rajin menjaga kebersihan masjid dan tempat fasilitas umum.",
+        opts: [
+            "Akibat: Lingkungan ibadah menjadi nyaman, sehat, dan meningkatkan khusyuk.",
+            "Akibat: Menghabiskan anggaran kas tanpa ada manfaat nyata.",
+            "Akibat: Menimbulkan sifat sombong di tengah masyarakat.",
+            "Akibat: Mempercepat kerusakan bangunan fasilitas."
+        ],
+        ans: 0,
+        explain: "Kebersihan merupakan bagian dari iman (An-Nadhifatu minal iman) yang menciptakan kebaikan bersama."
+    },
+
+    // --- EKONOMI SYARIAH & MUAMALAH ---
+    {
+        q: "Sebab: Pelaku usaha mempraktikkan Riba dan penipuan takaran dalam jual beli.",
+        opts: [
+            "Akibat: Terhapusnya keberkahan harta dan timbulnya ketimpangan sosial.",
+            "Akibat: Usaha menjadi makin berkembang dan diberkahi Allah.",
+            "Akibat: Terciptanya keadilan ekonomi bagi masyarakat miskin.",
+            "Akibat: Terhindar dari krisis ekonomi global."
+        ],
+        ans: 0,
+        explain: "Allah memusnahkan riba dan menumbuhkan sedekah (QS. Al-Baqarah: 276) serta mengancam penimbun/penipu takaran."
+    },
+    {
+        q: "Sebab: Seseorang yang berkecukupan rutin mengeluarkan Zakat, Infak, dan Sedekah (ZIS).",
+        opts: [
+            "Akibat: Hartanya menjadi bersih, suci, berkembang, dan membantu kaum dhuafa.",
+            "Akibat: Jumlah kekayaannya berkurang drastis hingga menjadi miskin.",
+            "Akibat: Merusak perekonomian pribadi dan keluarga.",
+            "Akibat: Menimbulkan pemborosan harta yang sia-sia."
+        ],
+        ans: 0,
+        explain: "Zakat berfungsi membersihkan harta dan jiwa serta memberdayakan ekonomi umat."
+    },
+
+    // --- AKIDAH & HARI AKHIR ---
+    {
+        q: "Sebab: Seseorang meyakini bahwa setiap amalnya di dunia akan dipertanggungjawabkan di Yaumul Hisab.",
+        opts: [
+            "Akibat: Menjadi lebih berhati-hati dalam berbuat dan bersemangat dalam kebaikan.",
+            "Akibat: Merasa takut berlebihan hingga tidak mau beraktivitas duniawi.",
+            "Akibat: Selalu menyalahkan takdir atas kegagalan hidup.",
+            "Akibat: Tidak mau berinteraksi dengan sesama manusia."
+        ],
+        ans: 0,
+        explain: "Iman kepada Hari Akhir mendorong kontrol diri (*self-control*) dan motivasi beramal saleh."
+    },
+    {
+        q: "Sebab: Seorang hamba rutin membaca Al-Qur'an dan merenungi maknanya (Tadabbur).",
+        opts: [
+            "Akibat: Memperoleh ketenangan hati (Sakinah), petunjuk hidup, dan pahala.",
+            "Akibat: Membuat pikiran menjadi bingung dan tidak fokus.",
+            "Akibat: Mengurangi kecerdasan intelektual.",
+            "Akibat: Menyebabkan kesulitan dalam beradaptasi dengan zaman."
+        ],
+        ans: 0,
+        explain: "Al-Qur'an adalah *Syifa* (penawar) dan *Hudan* (petunjuk) yang mendatangkan ketenangan hati."
+    },
+    {
+        q: "Sebab: Seseorang terbiasa bersyukur (Syukur) atas nikmat sekecil apa pun yang diterima.",
+        opts: [
+            "Akibat: Allah akan menambah nikmat-Nya dan memberikan ketenangan jiwa.",
+            "Akibat: Rezeki yang dimiliki akan langsung berhenti mengalir.",
+            "Akibat: Menjadikan diri malas berusaha lebih keras.",
+            "Akibat: Membuat orang lain menjadi iri dan benci."
+        ],
+        ans: 0,
+        explain: "QS. Ibrahim: 7 menegaskan bahwa barangsiapa yang bersyukur, maka Allah pasti akan menambah nikmat-Nya."
+    }
+];
